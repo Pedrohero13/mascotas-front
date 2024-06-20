@@ -1,1 +1,27 @@
-<p>personas-detail works!</p>
+<div class="container justify-content-center text-center">
+    <div class="card text-center " style="width: 18rem;">
+
+    </div>
+
+    <div class="card text-center">
+        <div class="card-header">
+            Cliente
+        </div>
+        <div class="card-body">
+            <h2 class="card-title">{{persona?.nombre}} {{persona?.apellidoPaterno}} {{persona?.apellidoMaterno}}</h2>
+            <h3 class="card-subtitle mb-2 text-body-secondary">{{persona?.email}}</h3>
+            <h2 class="card-subtitle mb-2 text-body-secondary">{{persona?.direccion}}</h2>
+            <h2 class="card-subtitle mb-2 text-body-secondary">{{persona?.fechaNacimiento}}</h2>
+            <h2 class="card-subtitle mb-2 text-body-secondary">{{persona?.telefono}}</h2>
+            <br>
+            @if (mascotas.length!=0) {
+                <app-mascotas-list [mascotas]="mascotas" [cliente]="false" />
+            }
+            @else {
+                <p class="card-text">No se encontraron mascotas.</p>
+            }
+
+            <a routerLink="/personas" class="card-link"><i class="bi bi-backspace"></i> Regresar</a>
+        </div>
+    </div>
+</div>

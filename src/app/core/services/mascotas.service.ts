@@ -2,7 +2,7 @@ import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
-import { Mascotas } from '../models/mascotas';
+import { MascotaDTO, Mascotas } from '../models/mascotas';
 
 @Injectable({
   providedIn: 'root'
@@ -17,10 +17,10 @@ export class MascotasService {
   obtenerMascota(id_mascota: number): Observable<Mascotas> {
     return this.http.get<Mascotas>(`${environment.apiUrl}/api/v1/obtenerMascota/${id_mascota}`);
   }
-  agregarMasctoa(mascota: Mascotas): Observable<Mascotas> {
+  agregarMasctoa(mascota: MascotaDTO): Observable<Mascotas> {
     return this.http.post<Mascotas>(`${environment.apiUrl}/api/v1/agregarMascota`, mascota);
   }
-  modificarMascota(id_mascota: number,mascota: Mascotas): Observable<Mascotas> {
+  modificarMascota(id_mascota: number,mascota: MascotaDTO): Observable<Mascotas> {
     return this.http.put<Mascotas>(`${environment.apiUrl}/api/v1/modificarMascota/${id_mascota}`,mascota);
   }
 

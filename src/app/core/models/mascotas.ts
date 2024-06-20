@@ -3,3 +3,8 @@ export interface Mascotas {
     nombre: string,
     fechaNacimiento: string
 }
+export interface MascotaDTO {
+    nombre: string,
+    fechaNacimiento: string
+    emailPersona: string
+}

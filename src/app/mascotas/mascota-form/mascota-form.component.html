@@ -1,0 +1,19 @@
+<div class="container justify-content-center text-center" style="max-width: 720px;">
+    <h1>Agregar mascota</h1>
+    <form>
+        <div class="mb-3" >
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" [(ngModel)]="nombre" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="mb-3">
+            <label for="fechaNacimiento" class="form-label" >Fecha de nacimiento</label>
+            <input type="date" class="form-control" id="fechaNacimiento" [(ngModel)]="fechaNacimiento" [ngModelOptions]="{standalone: true}"> 
+          </div>
+          <div class="mb-3">
+            <label for="emailPersona" class="form-label" >Correo del Cliente</label>
+            <input type="email" class="form-control" id="emailPersona" [(ngModel)]="emailPersona" [ngModelOptions]="{standalone: true}"> 
+          </div>
+        <button type="button" class="btn btn-outline-success" (click)="agregarMascota()">Guardar</button>
+    
+      </form>
+</div>

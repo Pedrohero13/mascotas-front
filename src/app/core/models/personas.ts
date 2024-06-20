@@ -11,3 +11,14 @@ export interface Personas {
     email: string,
     mascotas: Mascotas []
 }
+
+export interface PersonasDTO {
+   
+    nombre: string,
+    apellidoPaterno: string,
+    apellidoMaterno: string,
+    fechaNacimiento: string,
+    direccion: string,
+    telefono: string,
+    email: string,
+}
